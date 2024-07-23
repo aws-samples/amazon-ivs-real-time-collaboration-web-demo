@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    @apply m-0 box-border p-0;
+  }
+
+  html {
+    @apply scroll-smooth;
+    /* Firefox scrollbar */
+    scrollbar-color: #52525b transparent;
+  }
+
+  body {
+    @apply bg-gray-50 text-gray-900 dark:bg-zinc-900 dark:text-white;
+    @apply font-body not-italic antialiased;
+    @apply relative overflow-hidden;
+  }
+
+  /* WebKit scrollbar */
+  ::-webkit-scrollbar {
+    @apply h-2 w-2 bg-transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    @apply min-h-[40px] rounded-full border-none shadow-none bg-gray-400 hover:bg-gray-500 dark:bg-zinc-600 dark:hover:bg-zinc-500;
+  }
+  ::-webkit-scrollbar-track {
+    @apply mx-[3px];
+  }
+
+  /* Typography */
+  h1 {
+    @apply text-5xl font-medium leading-[58px];
+  }
+
+  h2 {
+    @apply text-4xl font-black leading-10;
+  }
+
+  h3 {
+    @apply text-2xl font-light leading-7;
+  }
+
+  h4 {
+    @apply text-xl font-medium;
+  }
+
+  h5 {
+    @apply text-sm font-semibold leading-5;
+  }
+
+  /* Custom classes */
+  .active-audio-base {
+    @apply after:absolute after:left-0 after:top-0 after:h-full after:w-full after:rounded-xl after:transition-shadow after:ease-out after:content-[''];
+  }
+  .active-audio {
+    @apply after:ring-4 after:ring-inset after:ring-orange-400;
+  }
+
+  @media (prefers-color-scheme: light) {
+    html {
+      /* Firefox scrollbar */
+      scrollbar-color: #9ca3af transparent;
+    }
+  }
+}

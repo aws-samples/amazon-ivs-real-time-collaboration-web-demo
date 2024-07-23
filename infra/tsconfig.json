@@ -1,0 +1,31 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "inlineSourceMap": true,
+    "inlineSources": true,
+    "moduleResolution": "Node10",
+    "module": "ESNext",
+    "outDir": "dist",
+    "paths": {
+      "@Shared/*": ["../shared/*"],
+      "@Lambda/*": ["lambdas/*"],
+      "@Lib/constants": ["lib/constants"],
+      "@Lib/constructs": ["lib/constructs"],
+      "@Lib/policies": ["lib/policies"],
+      "@Lib/stacks": ["lib/stacks"],
+      "@Lib/types": ["lib/types"],
+      "@Lib/utils": ["lib/utils"]
+    }
+  },
+  "files": [
+    "../shared/codegen.types.ts",
+    "../shared/types.ts",
+    ".eslintrc.cjs"
+  ],
+  "include": ["**/*"],
+  "exclude": ["node_modules", "dist", "cdk.out"],
+  "ts-node": { "require": ["tsconfig-paths/register"] }
+}

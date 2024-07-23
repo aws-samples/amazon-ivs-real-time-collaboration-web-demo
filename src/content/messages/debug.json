@@ -1,0 +1,46 @@
+{
+  "debug": {
+    "text": "Debug",
+    "note": "Debug page title"
+  },
+  "refreshingTokens": {
+    "text": "Refreshing tokens",
+    "note": "Notification displayed when refreshing participant tokens"
+  },
+  "refreshedTokens": {
+    "text": "Refreshed tokens",
+    "note": "Notification displayed when participant tokens have successfully refreshed"
+  },
+  "failedToRefreshTokens": {
+    "text": "Failed to refresh tokens",
+    "note": "Notification displayed when participant tokens failed to refresh"
+  },
+  "stageArn": {
+    "text": "Stage ARN",
+    "note": "Stage ARN data label"
+  },
+  "userParticipantToken": {
+    "text": "User participant token",
+    "note": "User participant token data label"
+  },
+  "userParticipantWhipUrl": {
+    "text": "User participant WHIP URL",
+    "note": "User participant WHIP URL data label"
+  },
+  "displayParticipantToken": {
+    "text": "Display participant token",
+    "note": "Display participant token data label"
+  },
+  "displayParticipantWhipUrl": {
+    "text": "Display participant WHIP URL",
+    "note": "Display participant WHIP URL data label"
+  },
+  "refreshTokens": {
+    "text": "Refresh tokens",
+    "note": "Label for button that refreshes the participant tokens"
+  },
+  "failedToCreateMeeting": {
+    "text": "Failed to create meeting",
+    "note": "Error message displayed when an error has occurred creating a meeting"
+  }
+}

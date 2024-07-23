@@ -1,0 +1,58 @@
+{
+  "settings": {
+    "text": "Settings",
+    "note": "Title for the 'Settings' modal."
+  },
+  "done": {
+    "text": "Done",
+    "note": "Label for Done button."
+  },
+  "saved": {
+    "text": "Saved",
+    "note": "Success notification message for saving a setting"
+  },
+  "mirrorMyVideo": {
+    "text": "Mirror my video",
+    "note": "Label for the button that toggles video mirroring"
+  },
+  "shareMyMirroredVideo": {
+    "text": "Share my mirrored video",
+    "note": "Label for the button that publishes the mirrored video to other participants"
+  },
+  "simulcast": {
+    "text": "Simulcast (excludes screen-shares)",
+    "note": "Label for the Simulcast settings toggle button."
+  },
+  "microphone": {
+    "text": "Microphone",
+    "note": "Label for microphone select list."
+  },
+  "camera": {
+    "text": "Camera",
+    "note": "Label for camera select list."
+  },
+  "noCamerasFound": {
+    "text": "No cameras found",
+    "note": "Label displayed in the camera select list when no devices were found."
+  },
+  "noMicrophonesFound": {
+    "text": "No microphones found",
+    "note": "Label displayed in the microphone select list when no devices were found."
+  },
+  "simulcastEnabled": {
+    "text": "Simulcast enabled",
+    "note": "Success notification displayed when simulcast has been enabled."
+  },
+  "simulcastDisabled": {
+    "text": "Simulcast disabled",
+    "note": "Success notification displayed when simulcast has been disabled."
+  },
+  "simulcastApplyConfigError": {
+    "text": "Failed to apply new Simulcast configuration",
+    "note": "Success notification displayed when simulcast config changes were not applied due to re-publish failure."
+  },
+  "turnOffIncomingVideo": {
+    "text": "Turn off incoming video",
+    "note": "Label for the turn off incoming video toggle button"
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "joinNow": {
+    "text": "Join now",
+    "note": "Label for the button that joins a meeting."
+  },
+  "joinMuted": {
+    "text": "Join muted",
+    "note": "Label for the button that joins a meeting muted."
+  },
+  "joinAsViewer": {
+    "text": "Join as viewer",
+    "note": "Label for the button that joins a meeting as a viewer."
+  },
+  "noneAreHere": {
+    "text": "No one else is here",
+    "note": "Message displayed during preview when no one is in the meeting/stage."
+  },
+  "oneIsHere": {
+    "text": "{firstParticipant} is here",
+    "note": "Message displayed during preview when one participant is in the meeting/stage."
+  },
+  "twoAreHere": {
+    "text": "{firstParticipant} and {secondParticipant} are here",
+    "note": "Message displayed during preview when two participants are in the meeting/stage."
+  },
+  "threeAreHere": {
+    "text": "{firstParticipant}, {secondParticipant} and {thirdParticipant} are here",
+    "note": "Message displayed during preview when three participants are in the meeting/stage."
+  },
+  "fourAreHere": {
+    "text": "{firstParticipant}, {secondParticipant}, {thirdParticipant} and 1 other are here",
+    "note": "Message displayed during preview when four participants are in the meeting/stage."
+  },
+  "manyAreHere": {
+    "text": "{firstParticipant}, {secondParticipant}, {thirdParticipant} and {remainingParticipantsCount} others are here",
+    "note": "Message displayed during preview when five or more participants are in the meeting/stage."
+  }
+}

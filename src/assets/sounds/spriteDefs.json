@@ -1,0 +1,7 @@
+{
+  "chatNotification": [0, 1060],
+  "connectedLocal": [1080, 1027],
+  "connectedRemote": [2127, 752],
+  "disconnectedLocal": [2899, 1251],
+  "disconnectedRemote": [4170, 902]
+}

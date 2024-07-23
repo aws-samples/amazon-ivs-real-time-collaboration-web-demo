@@ -1,0 +1,118 @@
+{
+  "failedToJoinMeeting": {
+    "text": "Failed to join the meeting",
+    "note": "Error message displayed when an error has occurred joining a meeting."
+  },
+  "failedToLoadDebugger": {
+    "text": "Failed to load the debugger",
+    "note": "Error message displayed when the debug page fails to load."
+  },
+  "userMedia/fallback": {
+    "text": "A user media error occurred",
+    "note": "Error message displayed for a fallback user media error"
+  },
+  "userMedia/permissionsDenied": {
+    "text": "You must allow access to both your camera and microphone",
+    "note": "Error message displayed for denied device permissions."
+  },
+  "displayMedia/fallback": {
+    "text": "A display media error occurred",
+    "note": "Error message displayed for a fallback display media error"
+  },
+  "displayMedia/permissionsDenied": {
+    "text": "You must allow access to capture your screen",
+    "note": "Error message displayed for denied screen share permissions."
+  },
+  "displayMedia/freeSlotTimedOut": {
+    "text": "Free slot timed out",
+    "note": "Error message displayed when a free slot attempt has timed out."
+  },
+  "stage/fallback": {
+    "text": "A stage error occurred",
+    "note": "Error message displayed for a fallback stage error"
+  },
+  "stage/JOIN_ERROR": {
+    "text": "Failed to join the stage",
+    "note": "Error message displayed when an attempt to join a stage has failed."
+  },
+  "stage/PUBLISH_ERROR": {
+    "text": "Failed to publish to the stage",
+    "note": "Error message displayed when an attempt to publish to a stage has failed."
+  },
+  "stage/PUBLISH_ERROR/STAGE_AT_CAPACITY": {
+    "text": "Stage is at capacity to publish",
+    "note": "Error message displayed when an attempt to publish to a stage has failed due to capacity."
+  },
+  "broadcast/fallback": {
+    "text": "A broadcast error occurred",
+    "note": "Error message displayed for a fallback broadcast error"
+  },
+  "broadcast/ConnectionTimeoutError": {
+    "text": "It's taking longer than usual to start broadcasting. Check your Internet connection and disable any VPNs.",
+    "note": "Error message displayed when the WebRTC connection takes too long to be established."
+  },
+  "broadcast/IngestEndpointUrlError": {
+    "text": "Ingest endpoint must be a valid https or rtmps URL",
+    "note": "Error message displayed when an invalid ingest endpoint was provided."
+  },
+  "broadcast/InvalidStreamKey": {
+    "text": "Invalid stream key",
+    "note": "Error message displayed an invalid stream key was provided."
+  },
+  "chat/fallback": {
+    "text": "A chat error occurred",
+    "note": "Error message displayed for a fallback chat error"
+  },
+  "chat/401": {
+    "text": "The chat connection has expired",
+    "note": "Error message displayed for an unauthorized chat error"
+  },
+  "chat/403": {
+    "text": "You are not allowed to perform this chat action",
+    "note": "Error message displayed for a forbidden chat error"
+  },
+  "chat/406": {
+    "text": "Chat message rejected by message review",
+    "note": "Error message displayed for a notAcceptable chat error"
+  },
+  "chat/413": {
+    "text": "Chat message is too long",
+    "note": "Error message displayed for a payloadTooLarge chat error"
+  },
+  "chat/429": {
+    "text": "Exceeded chat message rate limits",
+    "note": "Error message displayed for a tooManyRequests chat error"
+  },
+  "usernameValidation": {
+    "text": "Only numbers, letters, periods (.) and underscores (_) are allowed.",
+    "note": "Error message for invalid usernames"
+  },
+  "passwordValidation": {
+    "text": "Password does not meet requirements.",
+    "note": "Error message for invalid passwords"
+  },
+  "passwordsDoNotMatch": {
+    "text": "Passwords do not match.",
+    "note": "Error message for passwords that do not match"
+  },
+  "usernameExists": {
+    "text": "Username is already in use",
+    "note": "Error message displayed when the provided username already exists"
+  },
+  "emailExists": {
+    "text": "Email is already in use",
+    "note": "Error message displayed when the provided email already exists"
+  },
+  "emailDomainForbidden": {
+    "text": "Email domain is forbidden",
+    "note": "Error message displayed when the provided email domain is forbidden"
+  },
+  "incorrectCredentials": {
+    "text": "Incorrect username or password",
+    "note": "Error message displayed during sign-in when the provided username and/or password are incorrect"
+  },
+  "somethingWentWrong": {
+    "text": "Something went wrong",
+    "note": "Generic error message displayed when an unexpected error has occurred"
+  }
+}

@@ -1,0 +1,82 @@
+################
+# MESSAGES API #
+################
+
+schema {
+  query: Query
+  mutation: Mutation
+  subscription: Subscription
+}
+
+type Topic {
+  message: IMessage!
+  meetingId: String! # REQUIRED: used to notify all participants in a specified meeting
+  recipientId: String # OPTIONAL: used to notify a single participant in a meeting
+}
+
+interface IMessage {
+  id: ID! # auto-generated in resolver
+  time: AWSDateTime! # auto-generated in resolver
+  attributes: AWSJSON
+}
+union Message = Event | Notification
+
+type Event implements IMessage {
+  id: ID!
+  time: AWSDateTime!
+  attributes: AWSJSON
+  event: String! # A custom event that will be processed by the receiving participant(s)'s Stage client
+}
+input EventInput {
+  attributes: AWSJSON
+  event: String!
+}
+
+type Notification implements IMessage {
+  id: ID!
+  time: AWSDateTime!
+  attributes: AWSJSON
+  text: String # The text that will be displayed in the notification for the receiving participants(s). Default is null, which dismisses the notification.
+  type: String! # The type of notification that will be displayed (e.g. success, error, loading, etc.). Default is "blank."
+}
+input NotificationInput {
+  attributes: AWSJSON
+  text: String
+  type: String
+}
+
+###########
+# QUERIES #
+###########
+
+type Query {
+  getTopic: Topic
+}
+
+#############
+# MUTATIONS #
+#############
+
+type Mutation {
+  sendEvent(
+    meetingId: String!
+    recipientId: String
+    eventInput: EventInput!
+  ): Topic
+  sendNotif(
+    meetingId: String!
+    recipientId: String
+    notificationInput: NotificationInput!
+  ): Topic
+}
+
+#################
+# SUBSCRIPTIONS #
+#################
+
+type Subscription {
+  subscribeToMessages(
+    meetingId: String! # REQUIRED: subscribe to messages sent to all participants of a specified meeting
+    recipientId: String # OPTIONAL: subscribe to messages sent to a single participant in a meeting
+  ): Topic @aws_subscribe(mutations: ["sendEvent", "sendNotif"])
+}

@@ -1,0 +1,4 @@
+{
+  "BACKEND_STACK_PREFIX": "IVSRTCollabDemoBackend",
+  "WEBSITE_STACK_PREFIX": "IVSRTCollabDemoWebsite"
+}

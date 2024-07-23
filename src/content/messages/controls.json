@@ -1,0 +1,50 @@
+{
+  "turnOnMicrophone": {
+    "text": "Turn on microphone",
+    "note": "Aria label for the microphone button in muted state."
+  },
+  "turnOffMicrophone": {
+    "text": "Turn off microphone",
+    "note": "Aria label for the microphone button in unmuted state."
+  },
+  "turnOnCamera": {
+    "text": "Turn on camera",
+    "note": "Aria label for the camera button in hidden state."
+  },
+  "turnOffCamera": {
+    "text": "Turn off camera",
+    "note": "Aria label for the camera button in unhidden state."
+  },
+  "deviceConnected": {
+    "text": "New device connected: {device}",
+    "note": "Aria label for the camera button in unhidden state."
+  },
+  "deviceDisconnected": {
+    "text": "Disconnected device: {device}",
+    "note": "Aria label for the camera button in unhidden state."
+  },
+  "openSettings": {
+    "text": "Open video and audio settings",
+    "note": "Aria label for the settings button."
+  },
+  "leaveMeeting": {
+    "text": "Leave meeting",
+    "note": "Aria label for the leave meeting button."
+  },
+  "startScreenSharing": {
+    "text": "Start screen sharing",
+    "note": "Aria label for the screen sharing button in inactive state."
+  },
+  "stopScreenSharing": {
+    "text": "Stop screen sharing",
+    "note": "Aria label for the screen sharing button in active state."
+  },
+  "goLive": {
+    "text": "Go live",
+    "note": "Aria label for the button that opens the 'go live' setup modal."
+  },
+  "stopStream": {
+    "text": "Stop stream",
+    "note": "Aria label for the button that stops a broadcast stream."
+  }
+}

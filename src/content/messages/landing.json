@@ -1,0 +1,26 @@
+{
+  "title": {
+    "text": "Amazon IVS Real‑time",
+    "note": "Title for the Landing page."
+  },
+  "description": {
+    "text": "Connect and collaborate from anywhere in real time with Amazon IVS.",
+    "note": "Description for the Landing page."
+  },
+  "landingCoverImgAlt": {
+    "text": "Amazon IVS Real-time Collaboration Demo",
+    "note": "Image alt text for the Landing page cover image."
+  },
+  "createNewStageBtnLabel": {
+    "text": "New stage",
+    "note": "Label for the 'New stage' button"
+  },
+  "customStageCodePlaceholder": {
+    "text": "Enter stage code",
+    "note": "Placeholder for the custom stage code input field."
+  },
+  "customStageCodeSubmitBtnAriaLabel": {
+    "text": "Create a new stage with a custom stage code",
+    "note": "Aria label for the custom stage code submit button."
+  }
+}

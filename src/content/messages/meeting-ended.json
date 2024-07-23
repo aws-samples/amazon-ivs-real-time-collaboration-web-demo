@@ -1,0 +1,18 @@
+{
+  "youLeftTheStage": {
+    "text": "You left the stage",
+    "note": "Message displayed when the user has left the meeting/stage."
+  },
+  "rejoin": {
+    "text": "Rejoin",
+    "note": "Label for the button that rejoins the meeting/stage."
+  },
+  "returnToHomeScreen": {
+    "text": "Return to home screen",
+    "note": "Label for the button that returns the user to the home screen."
+  },
+  "returningToHomeScreen": {
+    "text": "Returning to home screen",
+    "note": "Message displayed next to a running countdown that returns the user to the home screen once expired."
+  }
+}

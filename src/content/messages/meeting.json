@@ -1,0 +1,146 @@
+{
+  "noContributors": {
+    "text": "There are no contributors in this meeting",
+    "note": "Message displayed when there are no stage publishers in the meeting."
+  },
+  "presentation": {
+    "text": "Presentation",
+    "note": "Name description for the screenshare/display participant card."
+  },
+  "screenSharing": {
+    "text": "Screen-sharing",
+    "note": "An identifier placed in a participant list item to show that the participant is currently screen-sharing."
+  },
+  "otherParticipant": {
+    "text": "1 other",
+    "note": "Text shown when there is one extra participant in the overflow card."
+  },
+  "otherParticipants": {
+    "text": "{participantsCount} others",
+    "note": "Text shown when there are multiple extra participants in the overflow card."
+  },
+  "enterFullscreen": {
+    "text": "View this content in fullscreen",
+    "note": "Aria label for full screen button when fullscreen is disabled."
+  },
+  "exitFullscreen": {
+    "text": "Exit fullscreen",
+    "note": "Aria label for full screen button when fullscreen is enabled."
+  },
+  "openSidebar": {
+    "text": "Open {sidebar}",
+    "note": "Aria label for a sidebar button when the respective sidebar is closed"
+  },
+  "closeSidebar": {
+    "text": "Close {sidebar}",
+    "note": "Aria label for a sidebar button when the respective sidebar is open"
+  },
+  "people": {
+    "text": "People",
+    "note": "Header for the people sidebar"
+  },
+  "chat": {
+    "text": "Chat",
+    "note": "Header for the chat sidebar"
+  },
+  "inviteToStage": {
+    "text": "Invite to stage",
+    "note": "Label for the section used to invite someone to the stage by sharing the meeting URL"
+  },
+  "onThisStage": {
+    "text": "On this stage",
+    "note": "Label for the publishing participants list sidebar section"
+  },
+  "viewers": {
+    "text": "Viewers",
+    "note": "Label for the viewer participants list sidebar section"
+  },
+  "viewerMode": {
+    "text": "Viewer mode",
+    "note": "Label for the viewer mode header text"
+  },
+  "incomingVideoTurnedOff": {
+    "text": "Incoming video is turned off",
+    "note": "Tooltip for the header info pill when audio-only mode is enabled"
+  },
+  "copy": {
+    "text": "Copy {value}",
+    "note": "Aria label for button that copies {value}"
+  },
+  "copiedToClipboard": {
+    "text": "Copied to clipboard",
+    "note": "Success notification for copying an item to clipboard"
+  },
+  "dismissNotification": {
+    "text": "Dismiss notification",
+    "note": "Aria label for dismissing a notification"
+  },
+  "goLiveTitle": {
+    "text": "Go live",
+    "note": "Title for the 'Go live' modal."
+  },
+  "startBroadcast": {
+    "text": "Start stream",
+    "note": "Label for start stream button."
+  },
+  "cancelBroadcast": {
+    "text": "Cancel",
+    "note": "Label for cancel button."
+  },
+  "broadcastIngestEndpoint": {
+    "text": "Ingest endpoint",
+    "note": "Label for the ingest endpoint input."
+  },
+  "broadcastStreamKey": {
+    "text": "Stream key",
+    "note": "Label for the stream key input."
+  },
+  "unknownChatUser": {
+    "text": "Unknown User",
+    "note": "Default name given to a chat user with missing name attribute."
+  },
+  "chatSaySomething": {
+    "text": "Say something",
+    "note": "Placeholder text for the chat composer."
+  },
+  "chatConnecting": {
+    "text": "Connecting...",
+    "note": "Placeholder text for the chat composer while connecting."
+  },
+  "chatDisconnected": {
+    "text": "Disconnected",
+    "note": "Placeholder text for the chat composer when disconnected."
+  },
+  "scrollChatToBottom": {
+    "text": "Scroll to the bottom",
+    "note": "Aria-label for the button that scrolls chat messages to the bottom."
+  },
+  "freeSlotTitle": {
+    "text": "Free up a slot",
+    "note": "Title for the 'Free up a slot' modal."
+  },
+  "freeSlotDescription": {
+    "text": "Choose a participant to free up a slot for your screen-share. Once you start screen-sharing, this participant will stop screen-sharing or become a viewer.",
+    "note": "Description for freeing up a slot when a screen-share is attempted in a stage that is at capacity"
+  },
+  "publishingScreen": {
+    "text": "Publishing screen...",
+    "note": "Loading text displayed while attempting to publish a screen-share"
+  },
+  "yourScreenShareWillEnd": {
+    "text": "Your screen-share will end soon",
+    "note": "Notice displayed when a user will stop screen-sharing to free up a slot"
+  },
+  "youAreBeingMovedToViewOnly": {
+    "text": "You're being moved to view-only",
+    "note": "Notice displayed when a user will unpublish to free up a slot"
+  },
+  "yourScreenShareWillEndCancelled": {
+    "text": "You may continue screen-sharing",
+    "note": "Notice displayed when a user no longer needs to stop screen-sharing to free up a slot"
+  },
+  "youAreBeingMovedToViewOnlyCancelled": {
+    "text": "You may continue publishing",
+    "note": "Notice displayed when a user no longer needs to stop publishing to free up a slot"
+  }
+}

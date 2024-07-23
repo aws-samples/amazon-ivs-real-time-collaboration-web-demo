@@ -1,0 +1,9 @@
+export { default as auth } from './auth.json';
+export { default as controls } from './controls.json';
+export { default as debug } from './debug.json';
+export { default as error } from './error.json';
+export { default as landing } from './landing.json';
+export { default as meeting } from './meeting.json';
+export { default as meetingEnded } from './meeting-ended.json';
+export { default as meetingPreview } from './meeting-preview.json';
+export { default as settings } from './settings.json';

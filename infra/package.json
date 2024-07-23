@@ -1,0 +1,48 @@
+{
+  "name": "amazon-ivs-real-time-collaboration-web-demo-infra",
+  "version": "0.0.1",
+  "type": "module",
+  "bin": {
+    "infra": "bin/infra.ts"
+  },
+  "scripts": {
+    "build": "tsc",
+    "cdk": "cdk",
+    "bootstrap": "BOOTSTRAP=true cdk bootstrap",
+    "deploy": "cdk deploy --all",
+    "destroy": "cdk destroy"
+  },
+  "dependencies": {
+    "@aws-appsync/utils": "^1.8.0",
+    "@aws-sdk/client-cognito-identity-provider": "^3.616.0",
+    "@aws-sdk/client-dynamodb": "^3.616.0",
+    "@aws-sdk/client-ivs-realtime": "^3.616.0",
+    "@aws-sdk/client-ivschat": "^3.616.0",
+    "@aws-sdk/client-kms": "^3.616.0",
+    "@aws-sdk/client-secrets-manager": "^3.616.0",
+    "@aws-sdk/client-sqs": "^3.616.0",
+    "@aws-sdk/client-ssm": "^3.616.0",
+    "@aws-sdk/lib-dynamodb": "^3.616.0",
+    "@aws-sdk/util-arn-parser": "^3.568.0",
+    "@aws-sdk/util-dynamodb": "^3.616.0",
+    "aws-cdk-lib": "^2.150.0",
+    "constructs": "^10.3.0",
+    "cron-parser": "^4.9.0",
+    "jsonwebtoken": "^9.0.2",
+    "nanoid": "^5.0.7",
+    "p-retry": "^6.2.0",
+    "source-map-support": "^0.5.21"
+  },
+  "devDependencies": {
+    "@aws-appsync/eslint-plugin": "^1.6.0",
+    "@types/aws-lambda": "^8.10.141",
+    "@types/jsonwebtoken": "^9.0.6",
+    "@types/node": "^20.14.11",
+    "@types/source-map-support": "^0.5.10",
+    "aws-cdk": "^2.150.0",
+    "esbuild": "^0.23.0",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.16.2",
+    "typescript": "^5.5.4"
+  }
+}
