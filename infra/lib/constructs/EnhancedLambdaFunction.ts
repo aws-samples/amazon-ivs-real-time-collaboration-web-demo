@@ -48,7 +48,7 @@ class EnhancedLambdaFunction extends nodejsLambda.NodejsFunction {
     });
 
     alias
-      .addAutoScaling({ ...opts, maxCapacity: 100 })
+      .addAutoScaling({ maxCapacity: 100, ...opts })
       .scaleOnUtilization({ utilizationTarget: 0.5 });
 
     return alias;

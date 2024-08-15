@@ -42,8 +42,13 @@ async function rotateKeyPair() {
   const responseJson = invokeResponse.Payload.transformToString();
   const responseData = JSON.parse(responseJson);
 
-  console.info(`\n✅ Successfully rotated ${appEnv} key-pair!\n`);
-  console.info(`🔑 Public Key ARN: ${responseData.body}\n`);
+  if (responseData.errorType) {
+    console.info(`\n❌ Failed to rotate ${appEnv} key-pair!\n`);
+    console.info(JSON.stringify(responseData, null, 2));
+  } else {
+    console.info(`\n✅ Successfully rotated ${appEnv} key-pair!\n`);
+    console.info(`🔑 Public Key ARN: ${responseData.body}\n`);
+  }
 }
 
 rotateKeyPair();
