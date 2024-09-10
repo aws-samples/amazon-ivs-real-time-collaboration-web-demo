@@ -29,6 +29,7 @@ import {
   aws_iam as iam,
   aws_kms as kms,
   aws_lambda as lambda,
+  aws_lambda_event_sources as eventSources,
   aws_logs as logs,
   aws_secretsmanager as sm,
   aws_sqs as sqs,
@@ -385,6 +386,12 @@ class BackendStack extends Stack {
     scheduleSubscriberUpdatesLambda.addEnvironment(
       'ACTIVE_MEETINGS_QUEUE_URL',
       activeMeetingsQueue.queueUrl
+    );
+    updateSubscribersLambda.addEventSource(
+      new eventSources.SqsEventSource(activeMeetingsQueue, {
+        batchSize: 10,
+        maxConcurrency: 10
+      })
     );
 
     new events.Rule(this, 'StageUpdateRule', {

@@ -3,7 +3,6 @@ import {
   DescribeStacksCommand
 } from '@aws-sdk/client-cloudformation';
 import { InvokeCommand, LambdaClient } from '@aws-sdk/client-lambda';
-import credsProviders from '@aws-sdk/credential-providers';
 import util from 'util';
 
 import config from '../shared/config.json';
@@ -20,10 +19,8 @@ if (!args.appEnv) {
 }
 
 const { appEnv } = args;
-const awsProfile = process.env.AWS_PROFILE;
-const credentials = credsProviders.fromIni({ profile: awsProfile });
-const cloudFormationClient = new CloudFormationClient({ credentials });
-const lambdaClient = new LambdaClient({ credentials });
+const lambdaClient = new LambdaClient();
+const cloudFormationClient = new CloudFormationClient();
 
 async function rotateKeyPair() {
   const stackName = `${config.BACKEND_STACK_PREFIX}-${appEnv}`;

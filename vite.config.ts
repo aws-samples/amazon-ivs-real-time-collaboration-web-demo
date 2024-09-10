@@ -1,5 +1,4 @@
 import cf from '@aws-sdk/client-cloudformation';
-import credsProviders from '@aws-sdk/credential-providers';
 import basicSSL from '@vitejs/plugin-basic-ssl';
 import reactSWC from '@vitejs/plugin-react-swc';
 import fs from 'fs';
@@ -23,9 +22,7 @@ interface StackExports {
 
 const https = process.env.HTTPS === 'true';
 const port = Number(process.env.PORT) || 3000;
-const awsProfile = process.env.AWS_PROFILE;
-const credentials = credsProviders.fromIni({ profile: awsProfile });
-const cloudFormation = new cf.CloudFormationClient({ credentials });
+const cloudFormation = new cf.CloudFormationClient();
 
 const viteConfig = vite.defineConfig(async ({ mode, command }) => {
   const buildVersion = getBuildVersion(command);
