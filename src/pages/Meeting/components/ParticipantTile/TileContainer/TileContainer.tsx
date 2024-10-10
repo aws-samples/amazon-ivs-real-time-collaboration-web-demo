@@ -38,6 +38,7 @@ function TileContainer({
       style={containerStyle}
       className={clsm([
         '@container',
+        'relative',
         'active-audio-base',
         'w-full',
         'h-full',
