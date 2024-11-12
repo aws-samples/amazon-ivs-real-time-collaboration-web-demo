@@ -10,6 +10,7 @@ import {
   Participant,
   ParticipantState,
   PublicKey,
+  ResourceNotFoundException,
   Stage,
   StageEndpoints,
   StageSummary
@@ -86,7 +87,15 @@ async function createToken({
 }
 
 async function deletePublicKey(arn: string) {
-  await ivsRealTimeClient.send(new DeletePublicKeyCommand({ arn }));
+  try {
+    await retryWithBackoff(() =>
+      ivsRealTimeClient.send(new DeletePublicKeyCommand({ arn }))
+    );
+  } catch (error) {
+    if (!(error instanceof ResourceNotFoundException)) {
+      throw error;
+    }
+  }
 }
 
 async function deleteStage(stageArn: string) {

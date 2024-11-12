@@ -37,14 +37,17 @@ async function rotateKeyPair() {
   const invokeCommand = new InvokeCommand({ FunctionName: rotateKeyPairFunc });
   const invokeResponse = await lambdaClient.send(invokeCommand);
   const responseJson = invokeResponse.Payload.transformToString();
-  const responseData = JSON.parse(responseJson);
+  const response = JSON.parse(responseJson);
 
-  if (responseData.errorType) {
-    console.info(`\n❌ Failed to rotate ${appEnv} key-pair!\n`);
-    console.info(JSON.stringify(responseData, null, 2));
-  } else {
+  if (response.statusCode >= 200 && response.statusCode < 300) {
     console.info(`\n✅ Successfully rotated ${appEnv} key-pair!\n`);
-    console.info(`🔑 Public Key ARN: ${responseData.body}\n`);
+    console.info(`🔑 Public Key ARN: ${response.body}\n`);
+  } else {
+    console.info(`\n❌ Failed to rotate ${appEnv} key-pair!\n`);
+    console.info({
+      statusCode: response.statusCode,
+      ...JSON.parse(response.body)
+    });
   }
 }
 
