@@ -44,7 +44,7 @@
   "dependencies": {
     "@headlessui/react": "^2.2.0",
     "amazon-ivs-chat-messaging": "^1.1.1",
-    "amazon-ivs-web-broadcast": "^1.19.0",
+    "amazon-ivs-web-broadcast": "^1.23.0",
     "aws-amplify": "^6.10.3",
     "axios": "^1.7.9",
     "boring-avatars": "~1.11.2",
