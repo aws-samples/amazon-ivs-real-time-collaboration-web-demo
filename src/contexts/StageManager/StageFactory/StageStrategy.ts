@@ -61,8 +61,8 @@ class StageStrategy {
 
     const videoTrack = this.mediaStreamToPublish?.getVideoTracks()[0];
     const videoConfig: StageVideoConfiguration = {
-      maxBitrate: STAGE_MAX_BITRATE,
       maxFramerate: STAGE_MAX_FRAMERATE,
+      maxVideoBitrateKbps: STAGE_MAX_BITRATE,
       ...(this.simulcast && { simulcast: this.simulcast })
     };
     if (videoTrack) {

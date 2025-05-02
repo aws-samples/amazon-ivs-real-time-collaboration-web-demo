@@ -389,8 +389,8 @@ class BackendStack extends Stack {
     );
     updateSubscribersLambda.addEventSource(
       new eventSources.SqsEventSource(activeMeetingsQueue, {
-        batchSize: 10,
-        maxConcurrency: 10
+        batchSize: 3,
+        maxConcurrency: 2
       })
     );
 
