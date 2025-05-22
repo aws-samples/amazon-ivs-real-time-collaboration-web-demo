@@ -10,11 +10,11 @@ interface UserMediaContext {
   userMediaError?: UserMediaError;
   audioMuted: boolean;
   videoStopped: boolean;
-  mediaStream?: MediaStream;
-  previewStream?: MediaStream;
+  mediaStream: MediaStream;
+  previewStream: MediaStream;
   toggleAudio: (options?: { muted?: boolean }) => void;
   toggleVideo: (options?: { stopped?: boolean }) => void;
-  startUserMedia: () => Promise<MediaStream | undefined>;
+  startUserMedia: () => Promise<MediaStream>;
   stopUserMedia: () => void;
   updateActiveDevice: (
     deviceKind: DeviceKind,

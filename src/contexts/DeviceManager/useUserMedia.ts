@@ -21,10 +21,10 @@ import {
 import { UserMediaContext, VideoMirrorMode } from './types';
 import useLocalDevices from './useLocalDevices';
 
-const { PUBLISHED } = StageParticipantPublishState;
+const { ATTEMPTING_PUBLISH, PUBLISHED } = StageParticipantPublishState;
 
-let mediaStream: MediaStream = new MediaStream();
-let previewStream: MediaStream = new MediaStream();
+const mediaStream = new MediaStream();
+const previewStream = new MediaStream();
 
 /**
  * Creates and manages a single user media stream
@@ -127,8 +127,6 @@ function useUserMedia(): UserMediaContext {
         newMediaStream = await getUserMedia(deviceIds);
       } catch (error) {
         console.error(error);
-
-        return;
       }
 
       if (newMediaStream) {
@@ -159,13 +157,7 @@ function useUserMedia(): UserMediaContext {
 
   const stopUserMedia = useCallback(() => {
     stopMediaStream(mediaStream);
-    mediaStream = new MediaStream();
-
     stopMediaStream(previewStream);
-    previewStream = new MediaStream();
-
-    setAudioMuted(false);
-    setVideoStopped(false);
   }, []);
 
   useEffect(() => {
@@ -181,7 +173,7 @@ function useUserMedia(): UserMediaContext {
     }));
 
     // Only process changes made to existing mediaStream tracks
-    if (mediaStream.getTracks().length) {
+    if (mediaStream.active) {
       updateMediaStream({ audioDeviceId, videoDeviceId });
     }
   }, [
@@ -196,6 +188,12 @@ function useUserMedia(): UserMediaContext {
       stopUserMedia();
     }
   }, [unpublished, republishing, stopUserMedia]);
+
+  useEffect(() => {
+    if (!mediaStream.active && publishState === ATTEMPTING_PUBLISH) {
+      startUserMedia();
+    }
+  }, [publishState, startUserMedia]);
 
   useEffect(() => stopUserMedia, [stopUserMedia]);
 
