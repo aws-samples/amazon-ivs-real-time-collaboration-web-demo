@@ -7,7 +7,7 @@ This demo uses [AWS Cloud Development Kit](https://aws.amazon.com/cdk/) (AWS CDK
 <img src="images/app-screenshot.png" alt="A web browser showing the demo application. Webcam videos from multiple participants are shown on screen in a grid formation, with controls for broadcasting, microphone, camera, screen-sharing, settings and leave meeting. A side panel containing a chat conversation is displayed next to the video grid." />
 
 >[!CAUTION]
-> **Use at Your Own Risk**: This is a code sample designed to help developers get started with Amazon IVS. It is not production-ready and will require additional development work to be suitable for production use. It is **not** intended for production use. Its primary goal is to help you understand the concepts and capabilities of Amazon IVS. By using this solution, you understand and accept its risks and limitations.
+> **Use at Your Own Risk**: This is a code sample designed to help developers get started with Amazon IVS. It is not production-ready and will require additional development work to be suitable for production use. It is **not** intended for production use as-is. Its primary goal is to help developers understand the concepts and capabilities of Amazon IVS. By using this solution, you understand and accept its risks and limitations.
 
 **This project is intended to demonstrate Amazon IVS capabilities and should be adapted and optimized for your specific production requirements. Use this code as a foundation for learning and initial development only.**
 
