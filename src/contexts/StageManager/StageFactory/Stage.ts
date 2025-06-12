@@ -54,7 +54,6 @@ class CustomStage extends Stage {
      * i.e., when the user refreshes the page, closes the tab or closes the browser window.
      */
     const onBeforeUnload = () => queueMacrotask(this.leave);
-    window.addEventListener('online', this.refreshStrategy, true);
     window.addEventListener('beforeunload', onBeforeUnload, true);
 
     this.on(STAGE_LEFT, (reason) => {
@@ -62,7 +61,6 @@ class CustomStage extends Stage {
 
       this.connected = false;
       this.published = false;
-      window.removeEventListener('online', this.refreshStrategy);
       window.removeEventListener('beforeunload', onBeforeUnload);
     });
 

@@ -99,14 +99,14 @@ function useStreams(stageConfig: StageClientConfig) {
       const mediaStreamTracks = mediaStream.getTracks();
       const stageStreamTracks = streams.map((st) => st.mediaStreamTrack); // "source-of-truth"
 
-      // Remove tracks that are in nextMediaStreamTracks but not in stageStreamTracks
+      // Remove tracks that are in mediaStreamTracks but not in stageStreamTracks
       for (const mediaStreamTrack of mediaStreamTracks) {
         if (!stageStreamTracks.includes(mediaStreamTrack)) {
           mediaStream.removeTrack(mediaStreamTrack);
         }
       }
 
-      // Add tracks that are in nextTracks but not in nextMediaStreamTracks
+      // Add tracks that are in stageStreamTracks but not in mediaStreamTracks
       for (const stageStreamTrack of stageStreamTracks) {
         if (!mediaStreamTracks.includes(stageStreamTrack)) {
           mediaStream.addTrack(stageStreamTrack);
