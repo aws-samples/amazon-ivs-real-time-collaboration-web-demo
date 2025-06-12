@@ -162,7 +162,10 @@ function getDisplayMedia() {
   const options: EnhancedDisplayMediaStreamOptions = {
     video: {
       cursor: 'always',
-      resizeMode: 'crop-and-scale'
+      resizeMode: 'crop-and-scale',
+      frameRate: { ideal: 30 },
+      width: { ideal: 1280 },
+      height: { ideal: 720 }
     },
     audio: {
       // The following audio constraints disable all browser audio processing
