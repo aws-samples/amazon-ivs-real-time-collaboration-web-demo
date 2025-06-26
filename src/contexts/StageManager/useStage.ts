@@ -70,6 +70,10 @@ function useStage(stageConfig: StageClientConfig, options: StageOptions = {}) {
     stg.on(STAGE_PARTICIPANT_STREAMS_REMOVED, streamHandlers.removeStreams);
     stg.on(STAGE_STREAM_MUTE_CHANGED, participantHandlers.upsertParticipant);
     stg.on(STAGE_STREAM_MUTE_CHANGED, streamHandlers.upsertStreams);
+    stg.on(
+      STAGE_PARTICIPANT_STREAMS_ADDED,
+      participantHandlers.upsertParticipant
+    );
 
     return stg;
   });
