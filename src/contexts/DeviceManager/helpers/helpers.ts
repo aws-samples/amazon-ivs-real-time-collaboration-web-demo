@@ -36,14 +36,17 @@ async function requestUserMediaPermissions({
   let error: Error | undefined;
 
   try {
-    mediaStream = await mediaDevices.getUserMedia({
-      video: {
-        deviceId: { ideal: deviceIds.video || 'default' }
-      },
-      audio: {
-        deviceId: { ideal: deviceIds.audio || 'default' }
-      }
-    });
+    try {
+      mediaStream = await mediaDevices.getUserMedia({
+        video: { deviceId: { exact: deviceIds.video || 'default' } },
+        audio: { deviceId: { exact: deviceIds.audio || 'default' } }
+      });
+    } catch (_error) {
+      mediaStream = await mediaDevices.getUserMedia({
+        video: true,
+        audio: true
+      });
+    }
 
     isGranted = true;
   } catch (e) {
