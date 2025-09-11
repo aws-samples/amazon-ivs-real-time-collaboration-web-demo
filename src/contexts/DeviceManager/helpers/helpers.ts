@@ -1,4 +1,4 @@
-import { isFulfilled, isRejected, noop } from '@Utils';
+import { noop } from '@Utils';
 
 import {
   DeviceKind,
@@ -7,7 +7,7 @@ import {
   EnhancedUserMediaStreamConstraints
 } from '../types';
 
-const { permissions, mediaDevices } = navigator;
+const { mediaDevices } = navigator;
 
 function checkMediaDevicesSupport() {
   if (!mediaDevices) {
@@ -36,41 +36,14 @@ async function requestUserMediaPermissions({
   let error: Error | undefined;
 
   try {
-    const constraints: MediaStreamConstraints = {};
-    checkMediaDevicesSupport();
-
-    const [cameraPermissionQueryResult, microphonePermissionQueryResult] =
-      await Promise.allSettled(
-        ['camera', 'microphone'].map((permissionDescriptorName) =>
-          permissions.query({
-            name: permissionDescriptorName as PermissionName
-          })
-        )
-      );
-
-    if (
-      (isFulfilled(cameraPermissionQueryResult) &&
-        cameraPermissionQueryResult.value.state !== 'granted') ||
-      isRejected(cameraPermissionQueryResult)
-    ) {
-      constraints.video = {
+    mediaStream = await mediaDevices.getUserMedia({
+      video: {
         deviceId: { ideal: deviceIds.video || 'default' }
-      };
-    }
-
-    if (
-      (isFulfilled(microphonePermissionQueryResult) &&
-        microphonePermissionQueryResult.value.state !== 'granted') ||
-      isRejected(microphonePermissionQueryResult)
-    ) {
-      constraints.audio = {
+      },
+      audio: {
         deviceId: { ideal: deviceIds.audio || 'default' }
-      };
-    }
-
-    if (Object.keys(constraints).length) {
-      mediaStream = await mediaDevices.getUserMedia(constraints);
-    }
+      }
+    });
 
     isGranted = true;
   } catch (e) {
