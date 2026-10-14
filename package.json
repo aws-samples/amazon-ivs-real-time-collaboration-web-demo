@@ -66,9 +66,9 @@
   "devDependencies": {
     "@aws-sdk/client-cloudformation": "^3.828.0",
     "@aws-sdk/client-lambda": "^3.828.0",
-    "@graphql-codegen/cli": "^5.0.7",
-    "@graphql-codegen/client-preset": "^4.8.2",
-    "@graphql-codegen/typescript": "^4.1.6",
+    "@graphql-codegen/cli": "^6.2.1",
+    "@graphql-codegen/client-preset": "^5.2.4",
+    "@graphql-codegen/typescript": "^5.0.9",
     "@tailwindcss/container-queries": "^0.1.1",
     "@types/howler": "^2.2.12",
     "@types/node": "^22.15.30",
